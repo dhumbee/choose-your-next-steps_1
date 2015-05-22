@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stage 4 Notes</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/main_css.css">
+		<br />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<!--my code for the drop down buttons-->
+		<script type="text/javascript"> 
+		$(document).ready(function() {
+			$('div.note_paragraph').hide();
+				$('div.button').click(function() {
+					$(this).next('div.note_paragraph').slideToggle('fast');
+				return false;
+				});
+				});
+		</script>>
+	
+	</head>
+
+	<body>
+<!--This starts the main header-->
+		<div class="main_header">
+			<h1>{{ title|safe}}</h1>
+			<div class="stage_name">
+				<img class="pancakes" src="images/pancake-stack.jpg" alt="A stack of pancakes.">
+				<h2>Stage 4: The Full Stack</h2>
+			</div>
+		</div>
+
+		<ul class="nav_list">
+			<li class="nav_link">
+				<a id="home" href="/">Home</a>
+				<a id="codepen" href="codepen.html">Codepen Notes</a>
+				<a id="guestbook" href="guestbook.html">Guestbook</a>
+			</li>
+		</ul>
+<!--End of main header, start main body of page-->
+		{% block content %}
+		<div class="main_notes">
+<!--The class "button" is the clickable toggle buttons-->
+			<div class="button" href=".">
+				<h1>Networks</h1>
+			</div>
+			<div class="note_paragraph"> <!--The class "note_paragraph" is the description that will either show or hide-->
+				<p>
+					A <em>network</em> is a group of entities that can communicate even though they are not all directly connected.  An example would be if two people, such as, Alice and Bob, never directly communicate with each other.  They would only go through Charlie to send messages back and forth.  So only Charlie would have direct contact to both people.
+				</p>  
+				<p>
+					To make a network there are a few key things we must know/or have.
+				</p>  
+				<ul> 
+					<li>To make a network we need a way to <b>convert</b> messages, <b>encode</b> messages, and <b>interpret</b> messages.</li> 
+					<li>We also need to know about <b>routing</b>.  What's going where.</li> 
+					<li>Who needs to <b>send the message</b> and who gets to <b>use the resources</b>.</li> 
+				</ul>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>Measuring Networks</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					Latency is the time it takes for messages to get from the source to the destination.  It's measured in units of time like milliseconds. (1000 illiseconds=1 second)  Bandwidth is the amount of information that can be transmitted per unit of time and is measured by bits per second. (MBPS)  A bit is the smallest unit of information.
+				</p> 
+				<div class="main_notes_images"> 
+					<img class="measuring_network_image" src="images/bits_1.png" alt="Drawing illustrating bits"> 
+					<img class="measuring_network_image" src="images/bits_question.png" alt="Question about bits">
+				</div> 
+				<p>
+					In the above example, we see that we want to ask questions that are right 50 percent of the time, so instead of using 3 questions to find where the star is, we would use 2 to find the answer.
+				</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>HTML Documents</h1>
+			</div>
+			<div class="note_paragraph">		
+				<p>
+					For HTML5, to identify which version we are using, we enter the "DOCTYPE" in the first line of our HTML file.  Then we have the HTML tag that surrounds the entire document.  Then we have the head tag which will contain our javascript, css, or meta data.  The title tag is the title of the document and can be seen when opened in the browser, at the top of our browser tabs.  And the body tag is where the fun stuff happen!
+				</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>URLS</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					URL stands for <b>Uniform Resource Locator</b>.  In a URL there is the <em>protocol</em>, <em>host</em>, and <em>path</em>.  We can also see <em>query parameters</em> (GET parameters) in our URL.  The "name"= "value of query parameters", the first query is separated with a ?, and the next is separated with &amp;.  <em>Caching</em> stores data so it doesn't need to be retrieved later.  It can be used to make data requests faster.  A <em>fragment</em> is separated from the rest of the url with a #.
+				</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>Absolute vs Relative Paths</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					An example of a <em>Relative Path</em> would be a html file (index.html) or a directory that accesses a file (../graphics/image.png or /help/articles/how-do-i-setup-a-webpage.html). <em>Absolute Paths</em> are actual websites and will include the actual domain name, as well as http://www...  Relative links only point to a file or a file path.  You must use absolute paths when linking to another website, and though you can also do that within your own website, it is generally frowned upon to do so.  Relative links make it easy to change your domain name without having to go through all your html pages, hunting down links and changing the names.  For more information click <a href="http://www.coffeecup.com/help/articles/absolute-vs-relative-pathslinks/">here</a>.
+				</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>HTTP Requests &amp; Responses &amp; Servers</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					A request line is followed by a number of headers.  Headers have a particular format "name:value".  A <em>Host</em>: "www.example.com"--&gt; This would be the server name. The <em>User Agent</em>: "chrome"--&gt; The browser.  Web servers can have multiple names.  One machine can host the website for many sites.
+				</p> 
+				<p>
+					Other common headers include:
+				</p> 
+				<ul> 
+					<li>Status line: http/1.1 200ok</li>  
+					<li>Date: Tues Mar 2012 04:33:33 gmt</li> 
+					<li>Server: apache/2.2.3</li>
+			  		<li>Content-Type: tnt/html</li> 
+			  		<li>Content-Length: 1539</li> 
+			  	</ul>  
+			  	<p>
+			  		Once browsers make a request to the server; the server sends a response.  It might respond with a document or information on the document.
+			  	</p>
+			  	<div class="main_notes_images"> 
+			  		<img class="http_image" alt="A drawing showing process and codes of HTTP responses" src="images/http-image.png">
+			  	</div> 
+			 	<p>
+			 		A <em>servers</em> purpose is to respond to HTTP requests. The computer/browser the person is using sends the request and server responds with usually one of two responses. The first is a <b>static</b> response; which is a pre-written file such as an image.  The second is a <b>dynamic</b> response; which is a program made "on the fly" called a web application.  It lives on the web server, speaks HTTP, and generates content that your browser requests.
+			 	</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>Python Break: Modulus and Dictionaries</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					The modulus operator is the percent sign.  A modulus will take a number divided by modulus number and return the <em>remainder</em>.  There is a brief YouTube video that covers Python modulo <a href="https://www.youtube.com/watch?v=b5cb_nfDyyM">here</a>. In Python a Dictionary uses curly braces.  Inside the braces are sets of keys with corresponding values.  Each key can only have one value, making it a pair.
+				</p> 
+			  	<div class="main_notes_images"> 
+			 		<img class="dict_image" alt="A visual showing differences between strings, lists, and dictionaries" src="images/dict-image.png"> 
+			 	</div>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>Working With Google App Engine &amp; Validation</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					Below is a table illustrating the differences between the "get" method and "post" method.
+				</p>
+			   	<table border="3" bordercolor="#fdf1f9" cellspacing="5" cellpadding="3">
+			   		<tr> 
+			   			<td align="center">GET</td> <td align="center">POST</td> 
+			   		</tr>
+			   		<tr> 
+			   			<td align="center">parameters in URL</td> <td align="center">parameters in body</td> 
+			   		</tr>
+			   		<tr> 
+			   			<td align="center">used for fetching documents</td> <td align="center">used for updating data</td> 
+			   		</tr>
+			   		<tr> 
+			   			<td align="center">max URL length</td> <td align="center">no max length</td> 
+			   		</tr>
+			   		<tr> 
+			   			<td align="center">ok to cache</td> <td align="center">not ok to cache</td> 
+			   		</tr>
+			  		<tr> 
+			  			<td align="center">shouldn't change server</td> <td align="center">ok to change server</td> 
+			  		</tr>
+			   	</table>
+			  	<p>
+			  		When we begin validation, all we are doing is verifying on the server side that what we expected to receive, is what we actually received. We start by verifying the users input and then, if an error is found, render the form again.  Including an error message will help the user understand what needs to be changed. Client-side validation is more for the purpose of giving a better user experience.  It can also reduce network and server load, though it is easily bypassed, which is why server-side validation is also very important.  A user could ruin databases, modify things, or elevate their privileges whenever they want if we don't validate user input.  
+			  	</p> 
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>String Substitution, Preserving Input, &amp; HTML Escaping</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					String substitution is where we use the "%"" &amp;"s" together to substitute strings.  It's a place holder for whatever value we are plugging into that spot.  You can sub in one word, or multiple different words, or even a dictionary.
+				</p> 
+				<p>
+					We can use string substitution to save a users input.  For instance, instead of using input type="text" value="cool", we can use "%"+(month)+"s".
+				</p>
+			</div> 
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>HTML Templates</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					In this course we use a template library that is built into Google App Engine, called Jinja2.  In this section we show some of the ways we can incorporate this into our websites.
+				</p> 
+				<div class="html-template-image"> 
+			   		<figure>
+			   			<img src="images/variable-substitution.png" alt="Example of variable substitution in Jinja2"> 
+			   			<img src="images/statement-syntax.png" alt="An image illustrating statement syntax in Jinja2"> 
+			   			<img src="images/for-loop.png" alt="This is an example of a for loop syntax in Jinja2"> 
+			   			<img src="images/template-inheritance.png" alt="How template inheritance works">
+			   				<figcaption>Here are some screen shots showing different syntax used in Jinja2.  From right to left; variable substitution, statement syntax, for loops, and template inheritance.</figcaption>
+			   		</figure> 
+			   	</div> 
+			   	<p>
+			   		Some useful tips when using templates; always automatically escape variables when possible, minimize code in templates, minimize html in code.  If you are like me...when I first was introduced to this, I wondered what the benefits would be of using templates. To name a few; we can separate different types of code, our code will be more readable, we'll have more secure websites, and we'll have HTML that is easier to modify.  Also using templates allows us to make a base version and then apply that to other pages, which helps us avoid typing up the same html structure over and over again.  An example of this would be if we were to use a Jinja for loop to reiterate a certain HTML layout, say an unordered list with many list items nested inside of it.  We could simply set up our data structure and the Jinja for loop will plug in the values we gave it.
+			   	</p>
+			   	<p>
+			   		I had a really hard time grasping the template concept and how to implement it with Jinja2.  <a href="https://www.youtube.com/watch?v=XyGW0ExGHDQ">Here</a> is a video on YouTube that really helped me in understanding how to use Jinja2 and templates, he has a few other Google App Engine videos too.
+			   	</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>Databases &amp; Tables</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					A <em>database</em> is a program that stores and receives large amounts of structured data. A server runs applications and can be used as databases that store and retrieve data.  Typically databases contain one or several tables.  Each table is identified by a name (e.g. "Customers" or "Orders").  Tables also contain records/rows that include data.  <em>Links</em> are column headings (such as "ID", "Votes", "User", "Title"...).  Every entry of a link is called a row.  There can be many rows for all the links that are submitted.  Every row will have an ID.
+				</p> 
+				<div class="table-image">
+			   		<img src="images/table-image.png" alt="An example of a table in databases."> 
+			   	</div> 
+			   	<p>
+			   		We can access values in tables using Python, however it is not ideal.  It can be error prone, tedious, slow...and just plain difficult.  So to avoid all of that, we can use SQL.
+			   	</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>SQL (aka Structured Query Language)</h1>
+			</div>
+			<div class="note_paragraph">
+				<p>
+					<em>SQL</em> allows you to access and manipulate databases.  An example of a SQL query/statement would be, "select * from links where id=5", this statement is saying to fetch data in all columns from the "link" table and then we've applied the constraint, where the ID equals 5.  You could also select a particular column name in a table or list of tables.  There are different operators that can be used in a "where" clause. <a href="http://www.w3schools.com/sql/sql_where.asp">Here</a> is a reference page that touches more on the SQL where clause.  Another thing we can change is the constraint; ID versus submitter.ID.  We can use the "order by" keyword, instead of "where" to sort the result by one of more columns.  SQL joins are a type of query that we can use to involve multiple tables.
+				</p>
+			</div>
+<!--Next subheading button-->
+			<div class="button" href=".">
+				<h1>Indexes</h1>
+			</div>
+			<div class="note_paragraph">   
+				<p>
+					A sequential scan is where we have a list of something and the information gets looped over looking for a particular piece of information.  Indexes make look ups faster.  In python it's similar to dictionaries; indexing a certain location will return that corresponding value.
+				</p>  
+				<div class="index-image">
+			   		<img src="images/index-image-1.png" alt="Here is an example of using Python dictionaries to map different links based on the lookup information.">
+			   		<img src="images/index-image-2.png" alt="In this example we have put our function into a variable that can be called in the future and by using the ".get"
+			   		function, which returns "none" instead of an error.">
+			   		<img src="images/index-image-3.png" alt="This example uses the existing code to add a new link and index that link to check it's there.">
+			   </div>
+			</div>
+		</div>
+		{% endblock %}  <!--End of Main Page Notes-->
+	
+	</body>
+
+</html>

@@ -1,0 +1,49 @@
+{% extends "webpage_html.html" %}
+{% block content %}
+
+<div class="main_form">
+	<h1 class="guestbook_header">Welcome to my Guestbook!</h1>
+	<form action="/guestbook.html" method="post" name="wall_name">
+	<p class="guestbook_intro">Please insert your name and message to leave a comment on my wall.</p>
+	<br>
+<!--Begins the text boxes for users to put their name and message-->
+	<div class="form_area">
+		<label class="label-name"><b>Name:</b></label><textarea id="name_box" type="text" name="guest_name"></textarea>
+		<label class="label-message"><b>Message:</b></label><textarea required id="message_box" type="text" name="guest_message"></textarea>
+	</div>
+	<button>Submit</button>
+	</form>
+
+	{% if guest_name %}
+		{% for guest_name in guest_name %}
+			<input type="hidden" name="guest_name" value="{{guest_name}}">
+		{% endfor %}
+			{% if guest_message %}
+				{% for guest_message in guest_message %}
+					<input type="hidden" name="guest_message" value="{{guest_message}}">
+				{% endfor %}
+			{% endif %}
+	{% endif %}
+</div>
+
+<!--End text submission and begin wall of posts-->
+	{% if posts %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="post_name">
+				{% if post.guest_name %}
+				<h2>{{post.guest_name}}</h2>
+				{% else %}
+				<h2>Anonymous Guest</h2>
+				{% endif %}
+			</div>
+			<div class="post_message">
+				<blockquote>{{post.guest_message}}</blockquote>
+				<p>{{post.date}}</p>
+			</div>
+		</div>
+	{% endfor %}
+	{% else %}
+		<h2 id="the_end">No messages yet! Be the first!!</h2>		
+	{% endif %}
+{% endblock %}

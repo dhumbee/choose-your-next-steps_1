@@ -1,0 +1,265 @@
+*{
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
+}
+
+body{
+	background-image: url(../images/dark-wood.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: calibri, "san serif";
+}
+
+.main_header{
+	background-color: #ffffff;
+	background-image: url(../images/light-texture.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin:25px;
+	font-size: 50px;
+	overflow: hidden;
+	
+}
+
+.main_header h1{
+	float: left;
+	margin-left: 8%;
+	margin-right: 5%;
+	margin-top: 5%;
+}
+
+.stage_name{
+	font-size: 25px;
+	float: right;
+	margin-right:8%;
+	margin-top: 2%;
+	 
+}
+
+.pancakes{
+	width: 50%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px gray;
+
+}
+
+.stage_name h2{
+	margin-top: 5px;
+}
+
+.nav_list{
+	list-style-type: none;
+	overflow: hidden;
+	background-color: rgba(255,255,255,1.0);
+	margin-left: 62px;
+	margin-right: 62px;
+	margin-bottom: 60px;
+	margin-top: 25px;
+	padding: 0px;
+	font-size: 20px;
+}
+
+.nav_link{
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	
+}
+
+.nav_link a{
+	text-decoration: bold;
+	margin:5%;
+	font-size: 50px;
+	color:black;	
+}
+
+.button {	
+	background-image: url(../images/polka-dots.png);
+	border: gray solid 2px;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	padding: 0px;
+	text-align: center;
+	text-decoration: bold;
+}
+
+.button h1{
+	font-size: 50px;
+}
+
+.button:hover {
+	cursor: pointer;
+	color: #01606d ;
+}
+
+.note_paragraph{
+	display: none;
+	color: white;
+	margin-left: 275px;
+	margin-right: 275px;
+	font-size: 20px;
+}
+
+.note_paragraph a{
+	color: white;
+}
+
+.main_notes_images {
+	text-align: center;
+	margin: 25px;     
+}
+
+.measuring_network_image {
+
+	margin-right: 5%;
+	margin-left: 5%;
+	vertical-align: middle;
+}
+
+.html-template-image {
+	margin-right: 5%;
+	margin-left: 5%;
+	vertical-align: middle;
+}
+
+.html-template-image figure {
+	text-align: center;
+}
+
+figure img {
+	width:24%;
+	height: inherit;
+}
+
+.table-image {
+	text-align: center;
+}
+
+.index-image {
+	text-align: center;
+}
+
+.codepen_para {
+	color:white;
+	font-size: 40px;
+	text-align: center;
+	margin-right: 275px;
+	margin-left: 275px;
+}
+
+.codepen_para a {
+	color: white;
+}
+
+.cp_embed {
+	margin-right: 27%;
+	margin-left: 27%;
+	
+}
+
+iframe {
+	width: 100%;
+	
+}
+
+.main_form{
+	color: white;
+	margin-right: 200px;
+	margin-left: 200px;
+}
+
+.guestbook_header {
+	font-size: 50px;
+}
+
+.guestbook_intro{
+	font-size: 30px;
+}
+
+.post {
+	color:white;
+	border: gray solid 3px;
+	margin-left: 200px;
+	margin-right: 200px;
+	
+}
+
+.label-name {
+	margin-right: 1%;
+	font-size: 30px;
+}
+
+.label-message {
+	margin-right: 1%;
+	margin-left: 2%;
+	font-size: 30px;
+}
+
+#name_box {
+	font-size: 20px;
+}
+
+#message_box {
+	font-size: 20px;
+	width: 25em;
+}
+
+button {
+	width: 8%;
+	height: 30px;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.post_name {
+	font-size: 25px;
+	margin-left: 10px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.post_name h2 {
+	margin-left: 10px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.post_message {
+	font-size: 25px;
+}
+
+.post_message blockquote {
+	margin-left: 50px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.post_message p {
+	margin-left: 25px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+#the_end {
+	color: white;
+	font-size:30px;
+	margin-left: 200px;
+	margin-right: 200px;
+
+}
+
+
+
+
+
+	
+
